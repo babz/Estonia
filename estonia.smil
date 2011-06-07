@@ -1,0 +1,257 @@
+<!DOCTYPE smil PUBLIC "-//W3C//DTD SMIL 3.0 Language//EN" 
+	"http://www.w3.org/2008/SMIL30/SMIL30Language.dtd">
+<smil xml:id="root" xmlns="http://www.w3.org/ns/SMIL" version="3.0" baseProfile="Language">
+
+	<head charset="utf-8">
+		
+		<meta name="title" content="Presenting Estonia" />
+		<meta name="author" content="0852176" />
+		<meta name="LVA" content="LUMM2 SS11" />
+		
+		<layout type="text/smil-basic-layout" >
+			<root-layout  width="800px" hight="600px" backgroundColor="black" />
+			
+			<!-- region for "skip intro", "back to main page" and "exit" -->
+			<region id="goTo" height="5%" bottom="20px" right="20px" z-index="2" textAlign="right" textColor="white" textFontSize="15px" textFontWeight="bold"/>
+			
+			<region id="pic" width="100%" height="100%" fit="fill" z-index="0" />
+			
+			<region id="menuText" fit="hidden" left="100px" z-index="1" textColor="black" textFontSize="20px" textFontWeight="bold" />
+			
+			<region id="text" height="50%" bottom="20px" left="55%" right="20px" z-index="1" textColor="white" textFontSize="20px" textAlign="right" />
+			
+			<region id="textHymn" right="100px" top="40px" textFontSize="15px" textColor="white" textAlign="right" />
+			
+			<region id="video" left="60px" top="60px" />
+			
+			<region id="diashowSightseeing" left="20px" top="40px" width="50%" />
+			
+			<region id="outro" left="20px" top ="40px" />
+		</layout>
+		<!-- switch, layout, transition -->
+	</head>
+	<body>
+				
+		<!-- Intro Video mit Skip-Button -->
+		<par id="intro" actuate="onLoad" skip-content="true">
+			<a name="skipIntro" href="#menu" >
+				<smilText region="goTo" >
+					Skip Intro<br/>
+				</smilText>
+			</a>
+			<seq>
+				<img region="pic" src="http://dl.dropbox.com/u/5163511/WelcomeScreen.png" dur="3s" />
+				<video region="video" id="introVideo" src="http://dl.dropbox.com/u/5163511/Estonia_presentation.avi" >
+					<param name="presentation" value="AVI-File" valuetype="data" />
+				</video>
+			</seq>
+		</par>
+		
+		<!-- Main Page TODO-->
+		<par id="menu" repeatCount="indefinite">
+			<img region="pic" src="http://dl.dropbox.com/u/5163511/menu.jpg" />
+			<a name="introRef" href="#intro" >
+				<smilText region="menuText" top="40px" >
+				Play Intro <br />
+				</smilText>
+			</a>
+			<a name="hymnRef" href="#hymn" >
+				<smilText region="menuText" top="85px" >
+				Hymn <br />
+				</smilText>
+			</a>
+			<a name="geographyRef" href="#geography" >
+				<smilText region="menuText" top="130px" >
+				Geography <br />
+				</smilText>
+			</a>
+			<a name="sightseeingRef" href="#sightseeing" >
+				<smilText region="menuText" top="175px" >
+				Sightseeing <br />
+				</smilText>
+			</a>
+			<a name="factbookRef" href="#factbook" >
+				<smilText region="menuText" top="230px" >
+				Factbook <br />
+				</smilText>
+			</a>
+			<a name="celebritiesRef" href="#celebrities" >
+				<smilText region="menuText" top="275px" >
+				Celebrities <br />
+				</smilText>
+			</a>
+			<a name="aboutRef" href="#about" >
+				<smilText region="menuText" top="320px" >
+				About <br />
+				</smilText>
+			</a>
+			
+			<a name="outroRef" href="#outro" >
+				<smilText region="goTo" >
+				Exit <br />
+				</smilText>
+			</a>
+		</par>
+		
+		<!-- Hymne -->
+		<par id="hymn">
+			<a href="#menu" >
+				<smilText region="goTo" >
+					Main Page<br/>
+				</smilText>
+			</a>
+			<img src="http://dl.dropbox.com/u/5163511/flag.jpg" top="40px" left="20px" />
+			<audio src="http://dl.dropbox.com/u/5163511/anthem_estonia.mp3" />
+			<seq>
+				<smilText region="textHymn">
+					Mu isamaa, mu onn ja room, <br/>
+					kui kaunis oled sa! <br/>
+					Ei leia mina iial teal <br/>
+					see suure, laia ilma peal, <br/>
+					mis mul nii armas oleks ka, <br/>
+					kui sa, mu isamaa! <br/>
+					
+				</smilText>
+			</seq>
+		</par>
+		
+		<!-- Infoseite -->
+		<par id="geography">
+			<a href="#menu" >
+				<smilText region="goTo" >
+					Main Page<br/>
+				</smilText>
+			</a>
+			<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/map.jpg" dur="10s" />
+			<smilText region="text" >
+				Area: <br/>
+				total: 45,228 sq km <br/>
+				includes 1,520 islands in the Baltic Sea <br/>
+			</smilText>
+		</par>
+		
+		<!-- Sightseeing -->
+		<par id="sightseeing" endsync="last">
+			<a href="#menu" >
+				<smilText region="goTo" >
+					Main Page<br/>
+				</smilText>
+			</a>
+
+			<seq>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/sight1.jpg" dur="5s"/>
+					<smilText region="text" >
+						The Cathedral of Saint Mary in the upper town of Tallinn is also known as the Dome Church. It is the oldest church in the city dating to ca. 1219.  
+					</smilText>
+				</par>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/sight2.JPG" dur="5s"/>
+					<smilText region="text" >
+						A Town Hall on the central square of Tallinn was first built at the beginning of the 13th century; the current structure is a reconstructed version dating to 1404. The building functioned as the city's administrative center for some 500 years; today it serves as a reception hall for visiting dignitaries and as a tourist destination site.  
+					</smilText>
+				</par>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/sight3.JPG" dur="5s"/>
+					<smilText region="text" >
+						Alexander Nevsky Cathedral in the upper town of Tallinn was completed in 1900.
+					</smilText>
+				</par>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/sight4.JPG" dur="5s"/>
+					<smilText region="text" >
+						Rooftop view of the lower town of Tallinn as seen from the upper town. The prominent church is that of Saint Nicholas, originally built in the 13th century. Partially destroyed by Soviet bombing during World War II, the church was restored and is today used as an art museum and concert hall.  
+					</smilText>
+				</par>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/sight5.JPG" dur="5s" />
+					<smilText region="text" >
+						Toompea Castle in the upper town of Tallinn is the home of the Estonian Parliament - the Riigikogu. 
+					</smilText>
+				</par>
+			</seq>
+		</par>
+		
+		<!-- CIA Factbook -->
+		<par id="factbook">
+			<a name="backToMain" href="#menu" >
+				<smilText region="goTo" textColor="white" textFontSize="15px" >
+					Main Page<br/>
+				</smilText>
+			</a>
+		</par>
+		
+		<!-- Celebrities -->
+		<par id="celebrities">
+			<a href="#menu" >
+				<smilText region="goTo" textColor="white" textFontSize="15px" >
+					Main Page<br/>
+				</smilText>
+			</a>
+			<seq>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/arvo-part.jpg" dur="5s" />
+					<smilText region="text" >
+						Arvo Paert (born 11 September 1935) is an Estonian classical composer.<br/>
+						Since the late 1970s, Paert has been working in a minimalist style that employs 
+						a self-made compositional technique called tintinnabuli.
+						His music also finds its inspiration and influence from Gregorian chant.
+					</smilText>
+				</par>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/carmen-kass.jpg" dur="5s"/>
+					<smilText region="text" >
+						Carmen Kass (born in Paide, Estonia, September 14, 1978) is an Estonian supermodel.<br/>
+						In 1999, Kass modeled for many famous designers including Gucci, Prada and Versace. 
+						Kass was a spokesperson for Sephora, a cosmetics brand known, and a perfume by Christian Dior.
+					</smilText>
+				</par>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/kerli.jpg" dur="5s"/>
+					<smilText region="text" >
+						Kerli Koeiv (born February 7, 1987), known by her stage name Kerli,
+						is an Estonian singer who is known for her alternative rock style and her album
+						Love Is Dead which charted in the Billboard 200.
+					</smilText>
+				</par>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/markko-martin.jpg" dur="5s"/>
+					<smilText region="text" >
+						Markko Martin (Tartu, November 10, 1975) is a former Estonian rally driver. 
+						He drove to the 2005 season in the World Rally Championship, then for Peugeot. 
+						He ended his career prematurely, however, after witnessing an accident 
+						during the World Cup rally of Great Britain in September 2005, his navigator Michael Park died.
+					</smilText>
+				</par>
+				<par>
+					<img region="diashowSightseeing" src="http://dl.dropbox.com/u/5163511/Michael-Roos.jpg" dur="5s" />
+					<smilText region="text" >
+						Michael Roos (born Mihkel Roos, October 5, 1982) is an Estonian American football offensive tackle 
+						for the Tennessee Titans of the National Football League.<br/>
+						He earned scholar-athlete honors three times in basketball, twice in track and once in football.
+					</smilText>
+				</par>
+			</seq>
+		</par>
+		
+		<!-- About / Impressum -->
+		<par id="about">
+			<a name="backToMain" href="#menu" >
+				<smilText region="goTo" textColor="white" textFontSize="15px" >
+					Main Page<br/>
+				</smilText>
+			</a>
+		</par>
+		
+		<!-- Outro -->
+		<par id="outro" dur="5s">
+			<smilText region="text">
+				Barbara Schwankl<br/>
+				0852176<br/>
+				MM2 LU<br/>
+				SS11<br/>
+			</smilText>
+		</par>
+		
+	</body>
+</smil>
