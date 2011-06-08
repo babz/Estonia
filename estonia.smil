@@ -31,6 +31,10 @@
 		<!-- switch, layout, transition -->
 	</head>
 	<body>
+	
+		<!-- Musik -->
+		<!-- src="http://dl.dropbox.com/u/5163511/02%20-%20Cool%20Vibes.mp3" 
+		http://dl.dropbox.com/u/5163511/02%20-%20Dangerzone%20%28Long%20Version%29.mp3 -->
 				
 		<!-- Intro Video mit Skip-Button -->
 		<par id="intro" actuate="onLoad" skip-content="true">
@@ -101,6 +105,7 @@
 				</smilText>
 			</a>
 			<img src="http://dl.dropbox.com/u/5163511/flag.jpg" top="40px" left="20px" />
+			<img src="http://dl.dropbox.com/u/5163511/hymn_lyrics.png" />
 			<audio src="http://dl.dropbox.com/u/5163511/anthem_estonia.mp3" />
 			<seq>
 				<smilText region="textHymn">
