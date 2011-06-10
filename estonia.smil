@@ -105,19 +105,9 @@
 				</smilText>
 			</a>
 			<img src="http://dl.dropbox.com/u/5163511/flag.jpg" top="40px" left="20px" />
-			<img src="http://dl.dropbox.com/u/5163511/hymn_lyrics.png" />
+			<img src="http://dl.dropbox.com/u/5163511/hymn_lyrics.png" top="20px" left="400px" />
 			<audio src="http://dl.dropbox.com/u/5163511/anthem_estonia.mp3" />
-			<seq>
-				<smilText region="textHymn">
-					Mu isamaa, mu onn ja room, <br/>
-					kui kaunis oled sa! <br/>
-					Ei leia mina iial teal <br/>
-					see suure, laia ilma peal, <br/>
-					mis mul nii armas oleks ka, <br/>
-					kui sa, mu isamaa! <br/>
-					
-				</smilText>
-			</seq>
+			
 		</par>
 		
 		<!-- Infoseite -->
@@ -246,15 +236,21 @@
 					Main Page<br/>
 				</smilText>
 			</a>
+			<par>
+				<!-- <img src="http://dl.dropbox.com/u/5163511/welcome.jpg" left="300px" /> -->
+				<smilText>
+					Barbara Schwankl<br/>
+					0852176<br/>
+					MM2 LU<br/>
+					SS11<br/>
+				</smilText>
+			</par>
 		</par>
 		
-		<!-- Outro -->
+		<!-- Outro / Links u Quellen-->
 		<par id="outro" dur="5s">
-			<smilText region="text">
-				Barbara Schwankl<br/>
-				0852176<br/>
-				MM2 LU<br/>
-				SS11<br/>
+			<smilText region="text" left="20px" top="20px">
+				hallo
 			</smilText>
 		</par>
 		
